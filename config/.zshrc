@@ -1,6 +1,5 @@
 
-:# ~/.zshrc
-export ZSH="/Users/dmitry.semenov/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
 ZSH_TMUX_AUTOSTART=false
 ZSH_THEME=
 
