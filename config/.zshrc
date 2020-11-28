@@ -8,6 +8,7 @@ plugins=(
   zsh-syntax-highlighting
   fzf-tab
   tmux
+  dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -20,6 +21,10 @@ alias summer="ps ax | grep spring | cut -f1 -d' ' | xargs kill | ps aux |grep sp
 alias p="fzf --preview 'bat --style=numbers --color=always {} | head -500'"
 alias v="nvim"
 alias ag="ag --pager='less -XFR'"
+alias qa-aws="kubectl config use-context qa-aws"
+alias qa-gcp="kubectl config use-context qa-gcp"
+#alias klf="kubectl logs -f $(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print $1}')"
+#alias kexec="kubectl exec -it $(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print $1}')"
 
 . /usr/local/opt/asdf/asdf.sh
 
