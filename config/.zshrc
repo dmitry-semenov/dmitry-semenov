@@ -1,4 +1,5 @@
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 ZSH_TMUX_AUTOSTART=true
 ZSH_THEME=
 
@@ -11,6 +12,9 @@ plugins=(
   dotenv
 )
 
+export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct
@@ -23,8 +27,10 @@ alias v="nvim"
 alias ag="ag --pager='less -XFR'"
 alias qa-aws="kubectl config use-context qa-aws"
 alias qa-gcp="kubectl config use-context qa-gcp"
-#alias klf="kubectl logs -f $(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print $1}')"
-#alias kexec="kubectl exec -it $(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print $1}')"
+alias kbash="kubectl exec -it \$(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print \$1}') -- bash"
+alias kexec="kubectl exec -it \$(kubectl get pods --field-selector=status.phase=Running | fzf | aws '{print \$1}') -- bundle exec rails c"
+alias klogs="kubectl logs -f \$(kubectl get pods --field-selector=status.phase=Running | fzf | awk '{print \$1}')"
+alias k="kubectl"
 
 . /usr/local/opt/asdf/asdf.sh
 
