@@ -18,3 +18,7 @@ ln -s ~/src/dmitry.semenov/config/.tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 ```
+
+```
+git config --global core.excludesFile '~/.gitignore_global'
+```
