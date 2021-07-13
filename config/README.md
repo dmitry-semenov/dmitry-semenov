@@ -20,5 +20,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ```
+ln -s ~/src/dmitry.semenov/config/.gitignore_global ~/.gitignore_global
 git config --global core.excludesFile '~/.gitignore_global'
 ```
