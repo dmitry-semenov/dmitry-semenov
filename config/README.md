@@ -12,10 +12,12 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 
 # Installing tmux & plugins
 ```
+
 ln -s ~/src/dmitry.semenov/config/.tmux.keys.conf ~/.tmux.keys.conf
 ln -s ~/src/dmitry.semenov/config/.tmux.remote.conf ~/.tmux.remote.conf 
 ln -s ~/src/dmitry.semenov/config/.tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone git@github.com:dmitry-semenov/kube-tmux.git ~/.tmux/plugins/kube-tmux
 ~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
@@ -23,3 +25,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ~/src/dmitry.semenov/config/.gitignore_global ~/.gitignore_global
 git config --global core.excludesFile '~/.gitignore_global'
 ```
+
+
+
